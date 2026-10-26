@@ -12,7 +12,7 @@ import requests
 def number_of_subscribers(subreddit):
     """Return the total subscribers of a subreddit."""
 
-    url = f"https://www.reddit.com/r/{subreddit}/about.json"
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
 
     headers = {
         "User-Agent": "linux:alu_subreddit_checker:v1.0 (by /u/alu_student)"
