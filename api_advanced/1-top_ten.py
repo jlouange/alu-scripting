@@ -15,7 +15,7 @@ def top_ten(subreddit):
             headers=headers, params=params,
             allow_redirects=False)
 
-        if response.status_code != 0:
+        if response.status_code != 200:
             print(None)
             return
 
