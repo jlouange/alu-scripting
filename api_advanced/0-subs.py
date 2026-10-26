@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 """
-Get the number of subscribers of a subreddit.
+Reddit API subscriber information module.
+
+This module provides a function that retrieves the total number
+of subscribers for a specified subreddit using the Reddit API.
+It returns zero when the subreddit is invalid or unavailable.
 """
 import requests
 
