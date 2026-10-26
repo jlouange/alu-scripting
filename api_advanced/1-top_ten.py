@@ -7,7 +7,7 @@ def top_ten(subreddit):
 
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     params = {"limit": 10}
-    headers = {"User_Agent": "linux: alu-api:V1.0 (by /u/alu_student)"}
+    headers = {"User-Agent": "linux: alu-api:V1.0 (by /u/alu_student)"}
 
     try:
         response = requests.get(
