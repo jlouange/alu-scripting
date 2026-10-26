@@ -8,14 +8,18 @@ def top_ten(subreddit):
 
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     params = {"limit": 10}
-    # headers = {"User-Agent": "linux: alu-api:V1.0 (by /u/alu_student)"}
-    headers = {"User-Agent": "Mozilla/5.0"}
-    response = requests.get(
-        url,
-        headers=headers, params=params,
-        allow_redirects=False)
 
-    if response.status_code == 200:
+    try:
+
+        headers = {"User-Agent": "linux: alu-api:V1.0 (by /u/alu_student)"}
+        response = requests.get(
+            url,
+            headers=headers, params=params,
+            allow_redirects=False)
+
+        if response.status_code != 200:
+            print(None)
+            return
 
         data = response.json()
 
@@ -23,4 +27,5 @@ def top_ten(subreddit):
         for post in posts:
             post.get("data").get("title")
 
-    print("OK")
+    except Exception as e:
+        print("Error:", e)
