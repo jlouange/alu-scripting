@@ -4,6 +4,7 @@ import requests
 
 
 def top_ten(subreddit):
+    """Print the titles of the first ten hot posts."""
 
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
     params = {"limit": 10}
