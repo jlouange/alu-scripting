@@ -1,4 +1,4 @@
-#!/bin/bash/python3
+#!/usr/bin/python3
 """First 10 hot posts listed for a given subreddit."""
 import requests
 
