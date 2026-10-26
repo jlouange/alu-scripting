@@ -24,7 +24,8 @@ def top_ten(subreddit):
 
         posts = data['data']['children']
         for post in posts:
-            print(post["data"]["title"])
+            post["data"]["title"]
+        print("OK")
 
     except Exception:
         print(None)
