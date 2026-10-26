@@ -7,6 +7,7 @@ import requests
 
 
 def recurse(subreddit, hot_list=[], after=""):
+    """The function"""
 
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
 
