@@ -22,9 +22,11 @@ def top_ten(subreddit):
         data = response.json()
 
         posts = data['data']['children']
+        for post in posts:
+                print(post["data"]["title"])
 
     except Exception as e:
-        print("Error: {}".format(e))
+        print(None)
+        return
 
-    for post in posts:
-        print(post["data"]["title"])
+    
